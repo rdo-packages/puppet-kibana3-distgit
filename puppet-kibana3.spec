@@ -1,3 +1,11 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%define upstream_name puppet-kibana3
+%global commit 6ca9631fbe82766134f98e2e8780bb91e7cd3f0e
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
+
 Name:           puppet-kibana3
 Version:        XXX
 Release:        XXX
@@ -6,7 +14,7 @@ License:        Apache-2.0
 
 URL:            https://github.com/thejandroman/puppet-kibana3
 
-Source0:        https://github.com/thejandroman/puppet-kibana3/archive/%{version}.tar.gz
+Source0:        https://github.com/thejandroman/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 
@@ -20,7 +28,7 @@ Requires:       puppet >= 2.7.0
 Installs and configures kibana3.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{upstream_version}
 
 find . -type f -name ".*" -exec rm {} +
 find . -size 0 -exec rm {} +
