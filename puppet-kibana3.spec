@@ -7,7 +7,7 @@
 
 
 Name:           puppet-kibana3
-Version:        0.0.4
+Version:        v0.0.3
 Release:        1%{?alphatag}%{?dist}
 Summary:        Installs and configures kibana3.
 License:        Apache-2.0
@@ -52,6 +52,9 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/kibana3/
 
 
 %changelog
+* Tue Nov 15 2016 Alfredo Moralejo <amoralej@redhat.com> v0.0.3-1.6ca9631.git
+- Newton update v0.0.3 (6ca9631fbe82766134f98e2e8780bb91e7cd3f0e)
+
 * Thu Sep 22 2016 Haikel Guemar <hguemar@fedoraproject.org> - 0.0.4-1.6ca9631.git
 - Newton update 0.0.4 (6ca9631fbe82766134f98e2e8780bb91e7cd3f0e)
 
