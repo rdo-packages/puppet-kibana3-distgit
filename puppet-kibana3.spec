@@ -10,7 +10,7 @@ Name:           puppet-kibana3
 Version:        XXX
 Release:        XXX
 Summary:        Installs and configures kibana3.
-License:        Apache-2.0
+License:        ASL 2.0
 
 URL:            https://github.com/thejandroman/puppet-kibana3
 
